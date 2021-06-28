@@ -1,4 +1,4 @@
-name: hugo init # 名字自取
+name: hugoblog # 名字自取
 
 on:
   push:
