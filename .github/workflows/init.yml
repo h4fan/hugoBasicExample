@@ -22,14 +22,6 @@ jobs:
 
       - name: Build
         run: |
-          hugo new site h4fansecurity
-          cd h4fansecurity
-          git init
-          git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
-          echo theme = \"ananke\" >> config.toml
-          hugo new posts/my-first-post.md
-          git commit -a
-          cd ..
           hugo --minify	# 使用hugo构建静态网页
 
       - name: Deploy
