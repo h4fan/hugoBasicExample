@@ -26,7 +26,7 @@ jobs:
           git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
           #ls -la themes
           #cat .gitmodules
-          # hugo -D
+          hugo -D
           hugo --minify	# 使用hugo构建静态网页
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3	# 一个自动发布github pages的action
