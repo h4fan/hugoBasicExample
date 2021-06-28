@@ -22,7 +22,11 @@ jobs:
 
       - name: Build
         run: |
-          ls
+          ls -la themes
+          git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+          ls -la themes
+          cat .gitmodules
+          hugo -D
           hugo --minify	# 使用hugo构建静态网页
 
       - name: Deploy
