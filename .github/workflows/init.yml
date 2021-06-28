@@ -1,4 +1,4 @@
-name: github pages # 名字自取
+name: hugo init # 名字自取
 
 on:
   push:
@@ -22,13 +22,13 @@ jobs:
 
       - name: Build
         run: |
-        hugo new site h4fansecurity
-        cd quickstart
-        git init
-        git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
-        echo theme = \"ananke\" >> config.toml
-        hugo new posts/my-first-post.md
-        hugo --minify	# 使用hugo构建静态网页
+          hugo new site h4fansecurity
+          cd h4fansecurity
+          git init
+          git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+          echo theme = \"ananke\" >> config.toml
+          hugo new posts/my-first-post.md
+          hugo --minify	# 使用hugo构建静态网页
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3	# 一个自动发布github pages的action
